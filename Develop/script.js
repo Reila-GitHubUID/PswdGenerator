@@ -1,11 +1,27 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
 
+
+//**********Ellin's code starts here *******/
+let pswdLength = prompt("Please enter the length of the password. Size must be between 8-128");
+
+let isSpecialChar = false; // initialization that indicates
+let isNumericChar = false; // that the user just want a basic
+let isUpperLowerCaseChar = false; // simple password
+let pswdLength = prompt("Please enter the length of the password. Size must be between 8-128");
+let isSpecialChar = alert("Do you want to have special characters in the password?");
+let isNumericChar = alert("Do you want to have numeric characters in the password?");
+let isUpperLowerCaseChar = alert("Do you want to have a combination of lower and upper case letters in the password? Note: The default would be all lower case.");
+
+
+
+
+//**********Ellin's code ends here *******/
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
