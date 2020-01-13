@@ -75,9 +75,6 @@ function copyToClipboard() {
 
   /* Copy the text inside the text field */
   document.execCommand("copy");
-
-  /* Alert the copied text */
-  console.log("Copied the text: " + copyText.value);
 }
 
 // Add event listener to generate button
