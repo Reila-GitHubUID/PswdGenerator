@@ -5,14 +5,28 @@ let generateBtn = document.querySelector("#generate");
 //**********Ellin's code starts here *******/
 let pswdLength = prompt("Please enter the length of the password. Size must be between 8-128");
 
-let isSpecialChar = false; // initialization that indicates
-let isNumericChar = false; // that the user just want a basic
-let isUpperLowerCaseChar = false; // simple password
-let pswdLength = prompt("Please enter the length of the password. Size must be between 8-128");
-let isSpecialChar = alert("Do you want to have special characters in the password?");
-let isNumericChar = alert("Do you want to have numeric characters in the password?");
-let isUpperLowerCaseChar = alert("Do you want to have a combination of lower and upper case letters in the password? Note: The default would be all lower case.");
+if (pswdLength < 8) {
+  pswdLength = prompt("Sorry, the number " + pswdLength + " is smaller than 8.\n You need to enter a number between 8 and 128.\n Please enter the length of the password.");
+}
+else if (pswdLength > 128) {
+  pswdLength = prompt("Sorry, the number " + pswdLength + " is bigger than 128.\n You need to enter a number between 8 and 128.\n Please enter the length of the password.");
+}
+else {
+  const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  const upperCase;
+  for (let i = 0; i<upperCase.length < i++) {
+    upperCase= lowerCase[i].toUpperCase();
+    console.log("lowerCase[i] = " + lowerCase[i]);
+  }
 
+  let isSpecialChar = false; // initialization that indicates
+  let isNumericChar = false; // that the user just want a basic
+  let isUpperLowerCaseChar = false; // simple password
+  isSpecialChar = alert("Do you want to have special characters in the password?");
+  isNumericChar = alert("Do you want to have numeric characters in the password?");
+  isUpperLowerCaseChar = alert("Do you want to have a combination of lower and upper case letters in the password? Note: The default would be all lower case.");
+
+}
 
 
 
