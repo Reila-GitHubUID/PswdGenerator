@@ -19,13 +19,21 @@ else {
     console.log("lowerCase[i] = " + lowerCase[i]);
   }
 
-  let isSpecialChar = false; // initialization that indicates
+  const specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
+
+  let isSpecialChar = false; // initialization to indicate
   let isNumericChar = false; // that the user just want a basic
   let isUpperLowerCaseChar = false; // simple password
   isSpecialChar = alert("Do you want to have special characters in the password?");
   isNumericChar = alert("Do you want to have numeric characters in the password?");
   isUpperLowerCaseChar = alert("Do you want to have a combination of lower and upper case letters in the password? Note: The default would be all lower case.");
 
+  for (let i = 0; i < pswdLength; i++) {
+    // Generate a random decimal number between 0 and 25
+    var num = Math.floor(Math.random() * 26);
+    // Display in console
+    console.log(num);
+}
 }
 
 
