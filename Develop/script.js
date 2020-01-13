@@ -1,5 +1,6 @@
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
+let copyBtn = document.querySelector("#copy");
 
 function generatePassword() {
         // The default password components
@@ -64,9 +65,23 @@ function writePassword() {
 
 function copyToClipboard() {
   // BONUS 
+  
+  /* Get the text field */
+  let copyText = document.querySelector("#password");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  console.log("Copied the text: " + copyText.value);
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 // BONUS EVENT LISTENER
+copyBtn.addEventListener("click", copyToClipboard);
