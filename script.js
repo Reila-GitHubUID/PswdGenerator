@@ -21,12 +21,14 @@ function generatePassword() {
         }
 
         let shuffleThis = lowerCase;
+        let selectAtLeastOne = false;
 
-        while (true) {
+        while (!selectAtLeastOne) {
           isSpecialChar = confirm("Do you want to have special characters in the password?");
           if (isSpecialChar) {    
             const specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
             shuffleThis = shuffleThis.concat(specialChar);
+            selectAtLeastOne = true;
           }
 
           isNumericChar = confirm("Do you want to have numeric characters in the password?");
@@ -34,12 +36,18 @@ function generatePassword() {
             for (let i = 0; i<=9; i++) {
               shuffleThis.push(i);
             }
+            selectAtLeastOne = true;
           }
 
-          isUpperLowerCaseChar = confirm("Do you want to have a combination of lower and upper case letters in the password? Note: The default would be all lower case alphabet only.");
+          isUpperLowerCaseChar = confirm("Do you want to have a combination of lower and upper case letters in the password?");
           if (isUpperLowerCaseChar) { 
-            const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];shuffleThis = shuffleThis.concat(upperCase);
+            const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+            shuffleThis = shuffleThis.concat(upperCase);
+            selectAtLeastOne = true;
           }
+
+          if (!selectAtLeastOne)
+            alert("You did not select at least 1 character types. Let's try again.");
         }
 
         let randomPassword = "";
