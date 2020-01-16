@@ -20,25 +20,26 @@ function generatePassword() {
             correct = false;
         }
 
-
         let shuffleThis = lowerCase;
 
-        isSpecialChar = confirm("Do you want to have special characters in the password?");
-        if (isSpecialChar) {    
-          const specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
-          shuffleThis = shuffleThis.concat(specialChar);
-        }
-
-        isNumericChar = confirm("Do you want to have numeric characters in the password?");
-        if (isNumericChar) {
-          for (let i = 0; i<=9; i++) {
-            shuffleThis.push(i);
+        while (true) {
+          isSpecialChar = confirm("Do you want to have special characters in the password?");
+          if (isSpecialChar) {    
+            const specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
+            shuffleThis = shuffleThis.concat(specialChar);
           }
-        }
 
-        isUpperLowerCaseChar = confirm("Do you want to have a combination of lower and upper case letters in the password? Note: The default would be all lower case alphabet only.");
-        if (isUpperLowerCaseChar) { 
-          const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];shuffleThis = shuffleThis.concat(upperCase);
+          isNumericChar = confirm("Do you want to have numeric characters in the password?");
+          if (isNumericChar) {
+            for (let i = 0; i<=9; i++) {
+              shuffleThis.push(i);
+            }
+          }
+
+          isUpperLowerCaseChar = confirm("Do you want to have a combination of lower and upper case letters in the password? Note: The default would be all lower case alphabet only.");
+          if (isUpperLowerCaseChar) { 
+            const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];shuffleThis = shuffleThis.concat(upperCase);
+          }
         }
 
         let randomPassword = "";
