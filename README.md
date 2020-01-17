@@ -1,5 +1,7 @@
 # PswdGenerator
-This program will help a user generate a minimal of 8 characters passwords
+This program will help a user generate a minimal of 8 characters passwords. 
+The screenshot of the completed application: 
+The link to the deployed GitHub Pages URL: https://reila-githubuid.github.io/PswdGenerator/
 
 ## Table of Contents
 
@@ -11,6 +13,7 @@ This program will help a user generate a minimal of 8 characters passwords
 ## Installation
 
 This project doesn't require installation. 
+a screenshot of the completed application as well as a link to the deployed GitHub Pages URL
 
 ## Purpose 
 
@@ -42,6 +45,7 @@ Additionally, the user also has the option to click a button to copy the passwor
 
 ## Credits
 
+https://www.bestcssbuttongenerator.com/#/0
 https://www.w3schools.com/
 https://www.google.com/
 
