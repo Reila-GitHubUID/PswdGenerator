@@ -44,6 +44,4 @@ Additionally, the user also has the option to click a button to copy the passwor
 
 https://www.w3schools.com/
 https://www.google.com/
-https://www.youtube.com/
-https://stackoverflow.com/
 
